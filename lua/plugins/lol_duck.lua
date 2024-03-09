@@ -4,6 +4,7 @@ return {
     { "<leader>hd", "<cmd>HatchDuck<cr>", desc = "Hatch Duck" },
     { "<leader>hc", "<cmd>HatchCat<cr>", desc = "Hatch Cat" },
     { "<leader>hr", "<cmd>HatchRawr<cr>", desc = "Hatch Rawr" },
+    { "<leader>hs", "<cmd>HatchSnail<cr>", desc = "Hatch Snail" },
     { "<leader>hk", "<cmd>HatchKill<cr>", desc = "Kill last one" },
     { "<leader>ha", "<cmd>HatchKillAll<cr>", desc = "Kill 'em all" },
   },
@@ -19,6 +20,9 @@ return {
     end, {})
     vim.api.nvim_create_user_command("HatchRawr", function()
       require("duck").hatch("🦖", 10)
+    end, {})
+    vim.api.nvim_create_user_command("HatchSnail", function()
+      require("duck").hatch("🐌", 0.5)
     end, {})
     vim.api.nvim_create_user_command("HatchKill", function()
       require("duck").cook()
