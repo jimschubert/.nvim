@@ -8,6 +8,9 @@ local opts = { noremap = true, silent = true }
 -- Toggle ZenMode, which will also pop up a fortune. See plugins/zenmode.lua
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", opts)
 
+-- keymap to remove default normal mode's J (join), because I hate it.
+vim.keymap.set("n", "J", "", opts)
+
 -- keymaps for moving in select mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv-gv", opts)
 vim.keymap.set("v", "K", ":m '<-2<CR>gv-gv", opts)
